@@ -31,11 +31,10 @@ export default class Utils {
     }
   }
 
-  static parseDateToTimeObj(d, minuteSteps){
+  static parseDateToTimeObj(d, minuteSteps) {
     console.warn("valid date in checkDateProp()");
     let hour = d.getHours();
-    let minutes =
-      Math.round(d.getMinutes() /minuteSteps) * minuteSteps;
+    let minutes = Math.round(d.getMinutes() / minuteSteps) * minuteSteps;
     console.log(minutes);
 
     let obj = {
@@ -43,11 +42,17 @@ export default class Utils {
       minute: minutes,
       meridian: hour < 12 ? "AM" : "PM"
     };
+
+    console.log("hour", hour);
+    // needs rework...found bug during midnight hour when hour shows as zero
+    if (hour === 0) {
+      obj.hour = 12;
+    }
     if (minutes == 60) {
       obj.hour++;
       obj.minute = 0;
     }
     obj.displayTime = this.parseDisplayTime(obj);
-    return obj
+    return obj;
   }
 }

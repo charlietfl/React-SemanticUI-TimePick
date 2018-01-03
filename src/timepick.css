@@ -3,8 +3,9 @@
 .ui.ribbon.label{
   position: absolute;
 }
-.ui.ribbon.label.left{
-  left:-12px
+.ui.ribbon.label.left {
+	left: -12px;
+  position: absolute;	
 }
 
 .t-picker{
