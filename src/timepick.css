@@ -1,0 +1,29 @@
+.center{text-align: center}
+
+.ui.ribbon.label{
+  position: absolute;
+}
+.ui.ribbon.label.left{
+  left:-12px
+}
+
+.t-picker{
+  max-width: 350px!important;
+  margin:auto;
+}
+.ui.segment.t-picker-footer{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  text-align: center
+}
+.t-picker .ui.basic.button,.t-picker  .ui.basic.buttons .button {
+
+	font-weight: 800;
+
+}
+
+.t-picker .ui.grid > .column:not(.row) .column {
+	padding-top: 8px;
+	padding-bottom: 8px;
+  padding-left:5px;
+}
