@@ -13,7 +13,9 @@ const styles = {
 const date= new Date()
 //date.setMinutes(22);
 //date.setHours(9)
-const steps = 5
+const steps = 5;
+
+const foo='bar'
 
 const App = () => (
   <div >
